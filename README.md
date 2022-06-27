@@ -15,16 +15,20 @@ El código que encontrará aquí se encuentra 100% funcional, por lo que si dese
 
 1- Crear la DB: api_rest_crud_php_dinamica y ejecutar el SQL que se encuentra en el archivo: Original_dinamica.sql
 
+
 2- Configurar el dominio apidinamica.com en el local, para esto se deben editar los 2 archivos que mencionamos a continuación:
 
-   A) C:\wamp64\bin\apache\apache2.4.51\conf\extra\httpd-vhosts.conf (El directorio de este archivo puede ser diferente dependiendo donde tenga instalado apache)
-      Se deben agregar las siguientes lineas textos:
-      ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/config_1.png?raw=true)
-      
-   B) C:\Windows\System32\drivers\etc\hosts
-      Se debe agregar la siguiente linea textos:
-      ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/config_2.png?raw=true)
+A) C:\wamp64\bin\apache\apache2.4.51\conf\extra\httpd-vhosts.conf (El directorio de este archivo puede ser diferente dependiendo donde tenga instalado apache)
+   Se deben agregar las siguientes líneas textos:
+   (El directorio "C:\wamp64\www\API-REST-CRUD-PHP-DINAMICA" también puede cambiar dependiendo donde tenga su directorio local instalado)
+   ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/config_1.png?raw=true)
+      
+B) C:\Windows\System32\drivers\etc\hosts
+   Se debe agregar la siguiente linea textos:
+   ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/config_2.png?raw=true)
+
 
 3- Importar los métodos de prueba en Postman con el archivo: APIREST.postman_collection.json
+
 
 ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/Postman.png?raw=true)
