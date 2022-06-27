@@ -83,6 +83,20 @@
         }
 
 
+        /* *******************************************************
+        PETICIONES GET PARA EL BUSCADOR CON TABLAS RELACIONADAS
+        ******************************************************* */
+        public function getRelDataSearch($rel, $type, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt){
+            #Llamamos al modelo solicitando la info de la DB
+            $response = GetModel::getRelDataSearch($rel, $type, $select, $linkTo, $search, $orderBy, $orderMode, $startAt, $endAt);
+            
+            #Tenemos que procesar lo devuelto por el modelo para poder devolverlo en formato requerido, esto lo hacemos con la función fncResponde()
+            $return = new getController();
+            $return->fncResponde($response);
+
+            //return $response; //Se lo devolvemos a get.php
+        }
+
 
         /* *******************************************************
         RESPUESTAS DEL CONTROLADOR

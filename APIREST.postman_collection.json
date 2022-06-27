@@ -19,7 +19,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero",
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente",
 					"host": [
 						"apidinamica",
 						"com"
@@ -40,7 +40,7 @@
 						},
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente"
 						}
 					]
 				}
@@ -60,7 +60,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero&equalTo=m",
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente&linkTo=genero_cliente&equalTo=m",
 					"host": [
 						"apidinamica",
 						"com"
@@ -71,11 +71,11 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente"
 						},
 						{
 							"key": "linkTo",
-							"value": "genero"
+							"value": "genero_cliente"
 						},
 						{
 							"key": "equalTo",
@@ -99,7 +99,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero,nombre&equalTo=m_Ariel",
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente&linkTo=genero_cliente,nombre_cliente&equalTo=m_Ariel",
 					"host": [
 						"apidinamica",
 						"com"
@@ -110,11 +110,11 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente"
 						},
 						{
 							"key": "linkTo",
-							"value": "genero,nombre"
+							"value": "genero_cliente,nombre_cliente"
 						},
 						{
 							"key": "equalTo",
@@ -138,7 +138,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&orderBy=id_cliente&orderMode=DESC",
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente&orderBy=id_cliente&orderMode=DESC",
 					"host": [
 						"apidinamica",
 						"com"
@@ -149,7 +149,7 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente"
 						},
 						{
 							"key": "linkTo",
@@ -187,7 +187,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero,nombre&equalTo=m_Ariel&orderBy=nombre&orderMode=DESC",
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente&linkTo=genero_cliente,nombre_cliente&equalTo=m_Ariel&orderBy=nombre_cliente&orderMode=DESC",
 					"host": [
 						"apidinamica",
 						"com"
@@ -198,11 +198,11 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente"
 						},
 						{
 							"key": "linkTo",
-							"value": "genero,nombre"
+							"value": "genero_cliente,nombre_cliente"
 						},
 						{
 							"key": "equalTo",
@@ -210,7 +210,7 @@
 						},
 						{
 							"key": "orderBy",
-							"value": "nombre"
+							"value": "nombre_cliente"
 						},
 						{
 							"key": "orderMode",
@@ -250,7 +250,7 @@
 						},
 						{
 							"key": "linkTo",
-							"value": "genero,nombre",
+							"value": "genero_cliente,nombre_cliente",
 							"disabled": true
 						},
 						{
@@ -296,7 +296,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero,nombre&equalTo=m_Juan B&orderBy=nombre&orderMode=DESC&startAt=0&endAt=2",
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente&linkTo=genero_cliente,nombre_cliente&equalTo=m_Juan B&orderBy=nombre_cliente&orderMode=DESC&startAt=0&endAt=2",
 					"host": [
 						"apidinamica",
 						"com"
@@ -307,11 +307,11 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente"
 						},
 						{
 							"key": "linkTo",
-							"value": "genero,nombre"
+							"value": "genero_cliente,nombre_cliente"
 						},
 						{
 							"key": "equalTo",
@@ -319,7 +319,7 @@
 						},
 						{
 							"key": "orderBy",
-							"value": "nombre"
+							"value": "nombre_cliente"
 						},
 						{
 							"key": "orderMode",
@@ -351,7 +351,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/relations?select=id_cliente,nombre,ap,am,genero,tipo,provincia&rel=clientes,clientes_tipos,provincias&type=cliente,tipo,provincia&orderBy=id_cliente&orderMode=DESC&startAt=0&endAt=5",
+					"raw": "apidinamica.com/relations?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente,tipo,provincia&rel=clientes,tipos,provincias&type=cliente,tipo,provincia&orderBy=id_cliente&orderMode=DESC&startAt=0&endAt=5",
 					"host": [
 						"apidinamica",
 						"com"
@@ -362,7 +362,7 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero,tipo,provincia"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente,tipo,provincia"
 						},
 						{
 							"key": "linkTo",
@@ -376,7 +376,7 @@
 						},
 						{
 							"key": "rel",
-							"value": "clientes,clientes_tipos,provincias",
+							"value": "clientes,tipos,provincias",
 							"description": "Tablas en las que buscaremos relaciones"
 						},
 						{
@@ -418,7 +418,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/relations?select=id_cliente,nombre,ap,am,genero,tipo,provincia&linkTo=genero,nombre&equalTo=m_Juan B&rel=clientes,clientes_tipos,provincias&type=cliente,tipo,provincia&orderBy=id_cliente&orderMode=DESC&startAt=0&endAt=5",
+					"raw": "apidinamica.com/relations?select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente,tipo,provincia&linkTo=genero_cliente,nombre_cliente&equalTo=m_Juan B&rel=clientes,tipos,provincias&type=cliente,tipo,provincia&orderBy=id_cliente&orderMode=DESC&startAt=0&endAt=5",
 					"host": [
 						"apidinamica",
 						"com"
@@ -429,11 +429,11 @@
 					"query": [
 						{
 							"key": "select",
-							"value": "id_cliente,nombre,ap,am,genero,tipo,provincia"
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente,tipo,provincia"
 						},
 						{
 							"key": "linkTo",
-							"value": "genero,nombre"
+							"value": "genero_cliente,nombre_cliente"
 						},
 						{
 							"key": "equalTo",
@@ -441,7 +441,7 @@
 						},
 						{
 							"key": "rel",
-							"value": "clientes,clientes_tipos,provincias",
+							"value": "clientes,tipos,provincias",
 							"description": "Tablas en las que buscaremos relaciones"
 						},
 						{
@@ -483,7 +483,7 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/clientes?select=*&linkTo=nombre,id_provincia&search=j_1",
+					"raw": "apidinamica.com/clientes?select=*&linkTo=nombre_cliente,id_provincia_cliente&search=j_1",
 					"host": [
 						"apidinamica",
 						"com"
@@ -498,12 +498,88 @@
 						},
 						{
 							"key": "linkTo",
-							"value": "nombre,id_provincia"
+							"value": "nombre_cliente,id_provincia_cliente"
 						},
 						{
 							"key": "search",
 							"value": "j_1",
 							"description": "Busqueda con comodines"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Búsqueda con relaciones y con filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/relations?rel=clientes,tipos,provincias&type=cliente,tipo,provincia&select=*&linkTo=nombre_cliente,id_provincia_cliente&search=A_2",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "clientes,tipos,provincias",
+							"description": "Tablas en las que buscaremos relaciones"
+						},
+						{
+							"key": "type",
+							"value": "cliente,tipo,provincia",
+							"description": "Tipo de la relación"
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre_cliente,id_provincia_cliente",
+							"description": "Columnas para el WHERE y AND"
+						},
+						{
+							"key": "search",
+							"value": "A_2"
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Juan B",
+							"description": "Valores para el WHERE y AND",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "id_cliente",
+							"disabled": true
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "endAt",
+							"value": "5",
+							"disabled": true
 						}
 					]
 				}

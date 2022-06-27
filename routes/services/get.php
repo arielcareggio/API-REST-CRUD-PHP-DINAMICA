@@ -54,11 +54,17 @@
 
         $response->getRelDataFilter($_GET['rel'], $_GET['type'], $select, $_GET['linkTo'], $_GET['equalTo'], $orderBy, $orderMode, $startAt, $endAt);
 
-    }else if(isset($_GET['linkTo']) && isset($_GET['search'])){
+    }else if(isset($_GET['linkTo']) && isset($_GET['search']) && !isset($_GET['rel']) && !isset($_GET['type'])){
         /* *******************************************************
         PETICIONES GET PARA EL BUSCADOR SIN RELACIONES
         ******************************************************* */
         $response->getDataSearch($table, $select, $_GET['linkTo'], $_GET['search'], $orderBy, $orderMode, $startAt, $endAt);
+
+    }else if(isset($_GET['rel']) && isset($_GET['type']) && $table == 'relations' && isset($_GET['linkTo']) && isset($_GET['search'])){
+        /* *******************************************************
+        PETICIONES GET PARA EL BUSCADOR CON RELACIONES
+        ******************************************************* */
+        $response->getRelDataSearch($_GET['rel'], $_GET['type'], $select, $_GET['linkTo'], $_GET['search'], $orderBy, $orderMode, $startAt, $endAt);
 
     }else{
         /* *******************************************************

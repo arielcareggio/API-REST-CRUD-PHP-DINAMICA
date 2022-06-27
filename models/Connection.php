@@ -6,7 +6,7 @@ class Connection {
     ******************************************************* */
     static public function infoDataBase(){
         $infoDB = array(
-            'database' => "api_rest_crud_php",
+            'database' => "api_rest_crud_php_dinamica",
             'user' => "root",
             'pass' => ""
         );
