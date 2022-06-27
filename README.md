@@ -10,3 +10,4 @@ En este momento me encuentro configurando el GET, para que sea dinámico y 100% 
 
 Iré actualizando el código a medida que vaya avanzando.
 
+![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/Postman.png?raw=true)
