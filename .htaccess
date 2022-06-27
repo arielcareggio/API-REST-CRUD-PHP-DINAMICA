@@ -1,0 +1,10 @@
+#Bloqueamos el acceso a los directorios y archivos
+Options All -Indexes
+
+#Activamos las multivistas para trabajar con las URL amigables
+Options -MultiViews
+RewriteEngine On
+
+#Creamos una condición para que cualquier parametro en la URL redireccione al index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

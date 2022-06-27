@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "786f9ffa-3f0d-4c8b-b4f0-da196429b911",
+		"name": "APIREST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21621124"
+	},
+	"item": [
+		{
+			"name": "GET - Seleccionar columnas especificas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "genero,nombre",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Ariel",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Filtro de un solo valor",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero&equalTo=m",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero"
+						},
+						{
+							"key": "equalTo",
+							"value": "m"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Filtros de varios valores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero,nombre&equalTo=m_Ariel",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero,nombre"
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Ariel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Ordenar datos sin filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&orderBy=id_cliente&orderMode=DESC",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero,nombre",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Ariel",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "id_cliente"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Ordenar datos con filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero,nombre&equalTo=m_Ariel&orderBy=nombre&orderMode=DESC",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero,nombre"
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Ariel"
+						},
+						{
+							"key": "orderBy",
+							"value": "nombre"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Limitar datos sin filtro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=*&startAt=0&endAt=2&orderBy=id_cliente&orderMode=DESC",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*",
+							"description": "Columnas a obtener"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero,nombre",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Ariel",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"description": "Desde el registro"
+						},
+						{
+							"key": "endAt",
+							"value": "2",
+							"description": "Hasta el registro"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_cliente",
+							"description": "Columna a ordenar"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC",
+							"description": "Modo de ordenamiento"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Limitar datos con filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=id_cliente,nombre,ap,am,genero&linkTo=genero,nombre&equalTo=m_Juan B&orderBy=nombre&orderMode=DESC&startAt=0&endAt=2",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero,nombre"
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Juan B"
+						},
+						{
+							"key": "orderBy",
+							"value": "nombre"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entre tablas sin filtro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/relations?select=id_cliente,nombre,ap,am,genero,tipo,provincia&rel=clientes,clientes_tipos,provincias&type=cliente,tipo,provincia&orderBy=id_cliente&orderMode=DESC&startAt=0&endAt=5",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero,tipo,provincia"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero,nombre",
+							"disabled": true
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Ariel",
+							"disabled": true
+						},
+						{
+							"key": "rel",
+							"value": "clientes,clientes_tipos,provincias",
+							"description": "Tablas en las que buscaremos relaciones"
+						},
+						{
+							"key": "type",
+							"value": "cliente,tipo,provincia",
+							"description": "Tipo de la relación"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_cliente"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Relaciones entre tablas con filtro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/relations?select=id_cliente,nombre,ap,am,genero,tipo,provincia&linkTo=genero,nombre&equalTo=m_Juan B&rel=clientes,clientes_tipos,provincias&type=cliente,tipo,provincia&orderBy=id_cliente&orderMode=DESC&startAt=0&endAt=5",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_cliente,nombre,ap,am,genero,tipo,provincia"
+						},
+						{
+							"key": "linkTo",
+							"value": "genero,nombre"
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Juan B"
+						},
+						{
+							"key": "rel",
+							"value": "clientes,clientes_tipos,provincias",
+							"description": "Tablas en las que buscaremos relaciones"
+						},
+						{
+							"key": "type",
+							"value": "cliente,tipo,provincia",
+							"description": "Tipo de la relación"
+						},
+						{
+							"key": "orderBy",
+							"value": "id_cliente"
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Búsqueda sin relaciones y con filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=*&linkTo=nombre,id_provincia&search=j_1",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre,id_provincia"
+						},
+						{
+							"key": "search",
+							"value": "j_1",
+							"description": "Busqueda con comodines"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
