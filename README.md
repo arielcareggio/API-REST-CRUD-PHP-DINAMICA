@@ -22,7 +22,8 @@ A) C:\wamp64\bin\apache\apache2.4.51\conf\extra\httpd-vhosts.conf (El directorio
    Se deben agregar las siguientes líneas textos:
    (El directorio "C:\wamp64\www\API-REST-CRUD-PHP-DINAMICA" también puede cambiar dependiendo donde tenga su directorio local instalado)
    ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/config_1.png?raw=true)
-      
+
+
 B) C:\Windows\System32\drivers\etc\hosts
    Se debe agregar la siguiente linea textos:
    ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/config_2.png?raw=true)
