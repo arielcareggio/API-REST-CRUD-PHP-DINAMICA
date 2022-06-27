@@ -14,6 +14,7 @@ Iré actualizando el código a medida que vaya avanzando.
 El código que encontrará aquí se encuentra 100% funcional, por lo que si desean probarlo lo podrán realizar, para ello seguir los siguientes pasos:
 
 1- Crear la DB: api_rest_crud_php_dinamica y ejecutar el SQL que se encuentra en el archivo: Original_dinamica.sql
+
 2- Importar los métodos de prueba en Postman con el archivo: APIREST.postman_collection.json
 
 
