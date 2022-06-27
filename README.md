@@ -16,6 +16,7 @@ El código que encontrará aquí se encuentra 100% funcional, por lo que si dese
 1- Crear la DB: api_rest_crud_php_dinamica y ejecutar el SQL que se encuentra en el archivo: Original_dinamica.sql
 
 2- Configurar el dominio apidinamica.com en el local, para esto se deben editar los 2 archivos que mencionamos a continuación:
+
     A) C:\wamp64\bin\apache\apache2.4.51\conf\extra\httpd-vhosts.conf (El directorio de este archivo puede ser diferente dependiendo donde tenga instalado apache)
       Se deben agregar las siguientes lineas textos:
       ![alt text](https://github.com/arielcareggio/API-REST-CRUD-PHP-DINAMICA/blob/master/config_1.png?raw=true)
