@@ -415,4 +415,103 @@
                 return null;
             }
         }
+
+        /* *******************************************************
+        PETICIONES GET PARA SELECCIÓN DE RANGOS con BETWEEN
+        ******************************************************* */
+        static public function getDataRange($table, $select, $linkTo, $between1, $between2, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo){
+
+            $filter = "";
+            if($filterTo != null && $inTo != null){
+                $filter = " AND $filterTo IN ($inTo) ";
+            }
+
+
+            #Preparamos la consulta
+            $sql = "SELECT $select FROM $table WHERE $linkTo BETWEEN '$between1' AND '$between2' $filter";
+
+            /* *******************************************************
+            ORDER BY
+            ******************************************************* */
+            if($orderBy != null && $orderMode != null){
+                #Preparamos la consulta con ORDER BY
+                $sql .= " ORDER BY $orderBy $orderMode";
+            }
+
+            /* *******************************************************
+            LIMIT
+            ******************************************************* */
+            if($startAt != null && $endAt != null){
+                #Preparamos la consulta con ORDER BY
+                $sql .= " LIMIT $startAt, $endAt";
+            }
+
+            #Hacemos la conexión y preparamos la sentencia
+            $stmt = Connection::connect()->prepare($sql);
+            #Ejecutamos la consulta
+            $stmt->execute();
+            #Retornamos la respuesta, por parámetro le enviamos PDO::FETCH_CLASS para que NO nos devuelva los indices de las columnas, de esta manera solo nos
+            #trae los nombres de las columnas y su contenido
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        }
+
+
+        /* *******************************************************
+        PETICIONES GET PARA SELECCIÓN DE RANGOS con BETWEEN y CON RELACIONES
+        ******************************************************* */
+        static public function getRelDataRange($rel, $type, $select, $linkTo, $between1, $between2, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo){
+            $filter = "";
+            if($filterTo != null && $inTo != null){
+                $filter = " AND $filterTo IN ($inTo) ";
+            }
+
+            $relArray = explode(",", $rel);
+            $typeArray = explode(",", $type);
+
+            #Preparamos la consulta, recordemos que la tabla principal esta en la primer posición del arreglo $relArray
+            #un ejemplo de lo que debería quedar: 
+            #$sql = "SELECT $select FROM clientes    INNER JOIN  clientes_tipos ON clientes.id_cliente           = clientes_tipos.id_cliente_tipo";
+            #$sql = "SELECT $select FROM $relArray[0] INNER JOIN  $relArray[1]   ON $relArray[0].id_$typeArray[0] = $relArray[1].id_$typeArray[0]_$typeArray[1]";
+            
+            #Si tenemos relaciones entre varias tablas tenemos que armar todos los INNER JOIN, esto lo hacemos con un for
+            $innerJoinText = "";
+            if(count($relArray) > 1){
+                foreach($relArray as $key => $value){
+                    #Tomamos a partir de la segunda posición, ya que en la primer posición viene la tabla principal
+                    if($key > 0){
+                        $innerJoinText .= " INNER JOIN  $value ON $relArray[0].id_$typeArray[0] = $value.id_$typeArray[0]_$typeArray[$key] ";
+                    }
+                }
+
+                #Preparamos la consulta
+                $sql = "SELECT $select FROM $relArray[0] $innerJoinText WHERE $linkTo BETWEEN '$between1' AND '$between2' $filter";
+
+                /* *******************************************************
+                ORDER BY
+                ******************************************************* */
+                if($orderBy != null && $orderMode != null){
+                    #Preparamos la consulta con ORDER BY
+                    $sql .= " ORDER BY $orderBy $orderMode";
+                }
+
+                /* *******************************************************
+                LIMIT
+                ******************************************************* */
+                if($startAt != null && $endAt != null){
+                    #Preparamos la consulta con ORDER BY
+                    $sql .= " LIMIT $startAt, $endAt";
+                }
+
+                #Hacemos la conexión y preparamos la sentencia
+                $stmt = Connection::connect()->prepare($sql);
+                #Ejecutamos la consulta
+                $stmt->execute();
+                #Retornamos la respuesta, por parámetro le enviamos PDO::FETCH_CLASS para que NO nos devuelva los indices de las columnas, de esta manera solo nos
+                #trae los nombres de las columnas y su contenido
+                return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+            }else{
+                return null;
+            }
+        }
     }

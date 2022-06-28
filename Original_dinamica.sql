@@ -79,3 +79,30 @@ INSERT INTO `tipos` (`id_cliente_tipo`, `tipo`, `date_created_tipo`, `date_updat
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+
+
+
+UPDATE clientes SET date_created_cliente = '2022-06-28' WHERE id_cliente = 1;
+UPDATE clientes SET date_created_cliente = '2022-05-20' WHERE id_cliente = 2;
+UPDATE clientes SET date_created_cliente = '2022-04-15' WHERE id_cliente = 3;
+UPDATE clientes SET date_created_cliente = '2022-06-28' WHERE id_cliente = 4;
+
+UPDATE clientes SET date_updated_cliente = '2022-05-22' WHERE id_cliente = 1;
+UPDATE clientes SET date_updated_cliente = '2022-05-21' WHERE id_cliente = 2;
+UPDATE clientes SET date_updated_cliente = '2022-04-17' WHERE id_cliente = 3;
+UPDATE clientes SET date_updated_cliente = '2022-01-28' WHERE id_cliente = 4;
+
+
+UPDATE provincias SET date_created_provincia = '2022-04-25' WHERE id_cliente_provincia = 1;
+UPDATE provincias SET date_created_provincia = '2022-03-21' WHERE id_cliente_provincia = 2;
+UPDATE provincias SET date_created_provincia = '2022-05-15' WHERE id_cliente_provincia = 3;
+
+UPDATE provincias SET date_updated_provincia = '2022-05-25' WHERE id_cliente_provincia = 1;
+UPDATE provincias SET date_updated_provincia = '2022-04-21' WHERE id_cliente_provincia = 2;
+UPDATE provincias SET date_updated_provincia = '2022-06-15' WHERE id_cliente_provincia = 3;
+
+UPDATE tipos SET date_created_tipo = '2022-04-15' WHERE id_cliente_tipo = 1;
+UPDATE tipos SET date_created_tipo = '2022-06-21' WHERE id_cliente_tipo = 2;
+
+UPDATE tipos SET date_updated_tipo = '2022-05-15' WHERE id_cliente_tipo = 1;
+UPDATE tipos SET date_updated_tipo = '2022-06-23' WHERE id_cliente_tipo = 2;

@@ -25,6 +25,13 @@
     $endAt = $_GET['endAt'] ?? null; #Especifica hasta que registro obtener
 
 
+    /* *******************************************************
+    RANGOS CON FILTROS
+    ******************************************************* */
+    #Si desde la URL se especifica el rango con filtro de registros:
+    $filterTo = $_GET['filterTo'] ?? null; #Columna para el filtro
+    $inTo = $_GET['inTo'] ?? null; #id's a filtrar con la columna especificada en filterTo
+
     $response = new getController();
 
     /* 
@@ -65,6 +72,18 @@
         PETICIONES GET PARA EL BUSCADOR CON RELACIONES
         ******************************************************* */
         $response->getRelDataSearch($_GET['rel'], $_GET['type'], $select, $_GET['linkTo'], $_GET['search'], $orderBy, $orderMode, $startAt, $endAt);
+
+    }else if(!isset($_GET['rel']) && !isset($_GET['type']) && isset($_GET['linkTo']) && isset($_GET['between1']) && isset($_GET['between2'])){
+        /* *******************************************************
+        PETICIONES GET PARA SELECCIÓN DE RANGOS con BETWEEN
+        ******************************************************* */
+        $response->getDataRange($table, $select, $_GET['linkTo'], $_GET['between1'], $_GET['between2'], $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo);
+
+    }else if(isset($_GET['rel']) && isset($_GET['type']) && $table == 'relations' && isset($_GET['linkTo']) && isset($_GET['between1']) && isset($_GET['between2'])){
+        /* *******************************************************
+        PETICIONES GET PARA SELECCIÓN DE RANGOS con BETWEEN y CON RELACIONES
+        ******************************************************* */
+        $response->getRelDataRange($_GET['rel'], $_GET['type'], $select, $_GET['linkTo'], $_GET['between1'], $_GET['between2'], $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo);
 
     }else{
         /* *******************************************************

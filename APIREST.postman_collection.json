@@ -523,7 +523,184 @@
 					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
 				},
 				"url": {
-					"raw": "apidinamica.com/relations?rel=clientes,tipos,provincias&type=cliente,tipo,provincia&select=*&linkTo=nombre_cliente,id_provincia_cliente&search=A_2",
+					"raw": "apidinamica.com/relations?rel=clientes,tipos,provincias&type=cliente,tipo,provincia&select=id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente,provincia,tipo,id_provincia_cliente,id_tipo_cliente&linkTo=nombre_cliente,id_provincia_cliente&search=A_2",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "clientes,tipos,provincias",
+							"description": "Tablas en las que buscaremos relaciones"
+						},
+						{
+							"key": "type",
+							"value": "cliente,tipo,provincia",
+							"description": "Tipo de la relación"
+						},
+						{
+							"key": "select",
+							"value": "id_cliente,nombre_cliente,ap_cliente,am_cliente,genero_cliente,provincia,tipo,id_provincia_cliente,id_tipo_cliente"
+						},
+						{
+							"key": "linkTo",
+							"value": "nombre_cliente,id_provincia_cliente",
+							"description": "Columnas para el WHERE y AND"
+						},
+						{
+							"key": "search",
+							"value": "A_2",
+							"description": "Valores del WHERE con comodín y AND"
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Juan B",
+							"description": "Valores para el WHERE y AND",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "id_cliente",
+							"disabled": true
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "endAt",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Seleccionar rangos con filtros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/clientes?select=*&linkTo=date_created_cliente&between1=2022-05-06&between2=2022-06-29&filterTo=id_cliente&inTo=1,2",
+					"host": [
+						"apidinamica",
+						"com"
+					],
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "clientes,tipos,provincias",
+							"description": "Tablas en las que buscaremos relaciones",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "cliente,tipo,provincia",
+							"description": "Tipo de la relación",
+							"disabled": true
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "date_created_cliente",
+							"description": "Columnas para el BETWEEN"
+						},
+						{
+							"key": "search",
+							"value": "A_2",
+							"description": "Valores del WHERE con comodín y AND",
+							"disabled": true
+						},
+						{
+							"key": "between1",
+							"value": "2022-05-06",
+							"description": "Rengo desde"
+						},
+						{
+							"key": "between2",
+							"value": "2022-06-29",
+							"description": "Rango hasta"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_cliente",
+							"description": "Columna para el filtro"
+						},
+						{
+							"key": "inTo",
+							"value": "1,2",
+							"description": "id a filtrar con la columna especificada en filterTo"
+						},
+						{
+							"key": "equalTo",
+							"value": "m_Juan B",
+							"description": "Valores para el WHERE y AND",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "id_cliente",
+							"disabled": true
+						},
+						{
+							"key": "orderMode",
+							"value": "DESC",
+							"disabled": true
+						},
+						{
+							"key": "startAt",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "endAt",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Seleccionar rangos con filtros con relaciones",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"1\",\r\n        \"nombre\": \"Juan B\",\r\n        \"ap\": \"Rodrígez B\",\r\n        \"am\": \"Paredes B\",\r\n        \"fn\": \"2005-10-11\",\r\n        \"genero\": \"M\"\r\n    }"
+				},
+				"url": {
+					"raw": "apidinamica.com/relations?rel=clientes,tipos,provincias&type=cliente,tipo,provincia&select=*&linkTo=date_created_cliente&between1=2022-05-06&between2=2022-06-29&filterTo=id_cliente&inTo=1,2",
 					"host": [
 						"apidinamica",
 						"com"
@@ -548,12 +725,34 @@
 						},
 						{
 							"key": "linkTo",
-							"value": "nombre_cliente,id_provincia_cliente",
-							"description": "Columnas para el WHERE y AND"
+							"value": "date_created_cliente",
+							"description": "Columnas para el BETWEEN"
 						},
 						{
 							"key": "search",
-							"value": "A_2"
+							"value": "A_2",
+							"description": "Valores del WHERE con comodín y AND",
+							"disabled": true
+						},
+						{
+							"key": "between1",
+							"value": "2022-05-06",
+							"description": "Rengo desde"
+						},
+						{
+							"key": "between2",
+							"value": "2022-06-29",
+							"description": "Rango hasta"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_cliente",
+							"description": "Columna para el filtro"
+						},
+						{
+							"key": "inTo",
+							"value": "1,2",
+							"description": "id a filtrar con la columna especificada en filterTo"
 						},
 						{
 							"key": "equalTo",

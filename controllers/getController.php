@@ -99,6 +99,36 @@
 
 
         /* *******************************************************
+        PETICIONES GET PARA SELECCIÓN DE RANGOS con BETWEEN
+        ******************************************************* */
+        public function getDataRange($table, $select, $linkTo, $between1, $between2, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo){
+            #Llamamos al modelo solicitando la info de la DB
+            $response = GetModel::getDataRange($table, $select, $linkTo, $between1, $between2, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo);
+            
+            #Tenemos que procesar lo devuelto por el modelo para poder devolverlo en formato requerido, esto lo hacemos con la función fncResponde()
+            $return = new getController();
+            $return->fncResponde($response);
+
+            //return $response; //Se lo devolvemos a get.php
+        }
+
+        /* *******************************************************
+        PETICIONES GET PARA SELECCIÓN DE RANGOS con BETWEEN y CON RELACIONES
+        ******************************************************* */
+        public function getRelDataRange($rel, $type, $select, $linkTo, $between1, $between2, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo){
+            #Llamamos al modelo solicitando la info de la DB
+            $response = GetModel::getRelDataRange($rel, $type, $select, $linkTo, $between1, $between2, $orderBy, $orderMode, $startAt, $endAt, $filterTo, $inTo);
+            
+            #Tenemos que procesar lo devuelto por el modelo para poder devolverlo en formato requerido, esto lo hacemos con la función fncResponde()
+            $return = new getController();
+            $return->fncResponde($response);
+
+            //return $response; //Se lo devolvemos a get.php
+        }
+
+
+
+        /* *******************************************************
         RESPUESTAS DEL CONTROLADOR
         ******************************************************* */
         /**
