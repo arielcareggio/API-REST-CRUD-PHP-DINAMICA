@@ -1,6 +1,6 @@
 <?php
     /* *******************************************************
-    MOSTRAR ERRORES
+    MOSTRAR ERRORES 
     ******************************************************* */
     ini_set('display_errors',1); #Permite visualizar errores desde el navegador o desde postman
     ini_set('log_errors',1); # Permite crear el archivo a nivel local

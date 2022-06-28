@@ -4,7 +4,7 @@
     class getController{
 
         /* *******************************************************
-        PETICIONES GET SIN FILTRO
+        PETICIONES GET SIN FILTRO 
         ******************************************************* */
         /**
          * Función que llama al modelo solicitando la info de la DB

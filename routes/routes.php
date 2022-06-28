@@ -1,6 +1,6 @@
 <?php
 
-    #capturamos lo que viene en una URL con $_SERVER['REQUEST_URI']
+    #capturamos lo que viene en una URL con $_SERVER['REQUEST_URI'] 
     #y lo convertimos a un array separando por /
     $routesArray = explode('/',$_SERVER['REQUEST_URI']);
     #Con array_filter eliminamos los campos vacíos que genera explode('/',$_SERVER['REQUEST_URI'])

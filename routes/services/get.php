@@ -3,7 +3,7 @@
 
     #Obtenemos la tabla que viene en el primer parámetro de la URL, eliminando todos los demás parámetros,
     #de esta forma como el primer parámetro es la tabla y vino después de un /, eliminamos los siguientes parámetros
-    #que vienen después del ?, y solo obtenerlos la tabla
+    #que vienen después del ?, y solo obtenerlos la tabla 
     $table = explode('?',$routesArray[1])[0];
 
     #Si en la URL existe el parámetro select entonces significa que nos están solicitando columnas especificas de la tabla

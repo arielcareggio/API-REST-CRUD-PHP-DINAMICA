@@ -4,7 +4,7 @@
     class getModel{
 
         /* *******************************************************
-        PETICIONES GET SIN FILTRO
+        PETICIONES GET SIN FILTRO 
         ******************************************************* */
         /**
          * Función que va a la DB en búsqueda de los datos de la determinada tabla

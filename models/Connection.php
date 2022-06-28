@@ -2,7 +2,7 @@
 
 class Connection {
     /* *******************************************************
-    INFORMACIÓN DE LA BD
+    INFORMACIÓN DE LA BD 
     ******************************************************* */
     static public function infoDataBase(){
         $infoDB = array(
