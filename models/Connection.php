@@ -44,6 +44,6 @@ class Connection {
         function __construct() {
             parent::__construct('localhost', 'root', '', 'api_rest_crud_php');
             $this->set_charset('utf8');
-            $this->connect_error == NULL ? 'Conexión exítosa a la DB' : die('Error al conectarse a la BD');
+            $this->connect_error == NULL ? 'Conexión exitosa a la DB' : die('Error al conectarse a la BD');
         }
     } */

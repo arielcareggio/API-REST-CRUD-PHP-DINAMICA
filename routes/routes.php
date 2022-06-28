@@ -3,14 +3,14 @@
     #capturamos lo que viene en una URL con $_SERVER['REQUEST_URI']
     #y lo convertimos a un array separando por /
     $routesArray = explode('/',$_SERVER['REQUEST_URI']);
-    #Con array_filter eliminamos los campos vacios que genera explode('/',$_SERVER['REQUEST_URI'])
+    #Con array_filter eliminamos los campos vacíos que genera explode('/',$_SERVER['REQUEST_URI'])
     $routesArray = array_filter($routesArray);
 
 
     /* *******************************************************
     CUANDO NO SE HACE NINGUNA PETICIÓN A LA API
     ******************************************************* */
-    #validamos que el array no esté vacio, si lo esta devolvemos un 404
+    #validamos que el array no esté vacío, si lo esta devolvemos un 404
     if(count($routesArray) == 0){
         returnJson(404,'Not found');
     }
@@ -18,7 +18,7 @@
     /* *******************************************************
     CUANDO SI SE HACEN PETICIONES A LA API
     ******************************************************* */
-    #Consultamos si el array tiene un indice y preguntamos si viene un metodo HTTP
+    #Consultamos si el array tiene un indice y preguntamos si viene un método HTTP
     if(count($routesArray) == 1 && isset($_SERVER['REQUEST_METHOD'])){
 
         /* *******************************************************

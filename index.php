@@ -4,7 +4,7 @@
     ******************************************************* */
     ini_set('display_errors',1); #Permite visualizar errores desde el navegador o desde postman
     ini_set('log_errors',1); # Permite crear el archivo a nivel local
-    ini_set('error_log', "C:\wamp64\www\API-REST-CRUD-PHP-DINAMICA\php_error_log"); #La ruta de donde aparecera el archivo errores y el nombre del archivo
+    ini_set('error_log', "C:\wamp64\www\API-REST-CRUD-PHP-DINAMICA\php_error_log"); #La ruta de donde aparecerá el archivo errores y el nombre del archivo
 
     /* *******************************************************
     REQUERIMIENTOS

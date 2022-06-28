@@ -103,10 +103,10 @@
         ******************************************************* */
         /**
          * Función de respuesta
-         * Para mostrar en formato json la info que nos devolvio el modelo 
+         * Para mostrar en formato json la info que nos devolvió el modelo 
          */
         public function fncResponde($response){
-            #Si no viene vacio
+            #Si no viene vacío
             if(!empty($response)){
                 $json = array(
                     'status' => 200,
@@ -114,7 +114,7 @@
                     'results' => $response
                 );
             }else{
-                #Si viene vacio
+                #Si viene vacío
                 $json = array(
                     'status' => 404,
                     'results' => 'Not found'
